@@ -182,7 +182,7 @@ formDatos.addEventListener('submit', (event) => {
 
 btnSiguiente.addEventListener('click', (event) => {
     if (misPedidos.first == null) {
-        alert('No hay pedidos por registrar')
+        alert('No hay pedidos por entregar')
     } else {
         const sonido = new SpeechSynthesisUtterance(misPedidos.leerMensaje())
         sonido.lang = 'es-ES';
