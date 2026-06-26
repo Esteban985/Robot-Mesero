@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmanuelBot - Robot Mesero</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🤖 Robot Mesero</h1>
+            <p>Robot Inteligente para Gestión de Pedidos</p>
+        </header>
+
+        <section class="top-grid">
+
+            <!-- FORMULARIO -->
+            <div class="card">
+                <h2>➕ Nuevo Pedido</h2>
+
+                <form id="datos">
+                    <div class="input-group">
+                        <label>Cliente</label>
+                        <input id="nombre" type="text" placeholder="Nombre del cliente">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Platillo</label>
+                        <input id="platillo" type="text" placeholder="Platillo solicitado">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Bebida</label>
+                        <input id="bebida" type="text" placeholder="Bebida solicitada">
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Registrar Pedido
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- PANEL ROBOT -->
+            <div class="card">
+                <h2>🤖 Estado del Robot</h2>
+
+                <div class="robot-status">
+
+                    <div class="status-box">
+                        <h3>Pedido Actual</h3>
+                        <span id="pedidoActual">
+                            Esperando pedidos...
+                        </span>
+                    </div>
+
+                    <div class="status-box">
+                        <h3>Próximo Pedido</h3>
+                        <span id="proximoPedido">
+                            Sin pedidos
+                        </span>
+                    </div>
+
+                    <div class="status-box">
+                        <h3>Pendientes</h3>
+                        <span id="totalPendientes">0</span>
+                    </div>
+
+                </div>
+
+                <button id="siguientePedido" type="button" class="btn-success">
+                    Entregar Siguiente Pedido
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- COLA -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>📋 Cola de Pedidos Pendientes</h2>
+            </div>
+
+            <div id="listaPedidos" class="pedido-list">
+
+            </div>
+
+        </section>
+
+        <!-- HISTORIAL -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>📦 Historial de Entregas</h2>
+            </div>
+
+            <div id="historial">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Pedido</th>
+                            <th>Mesa</th>
+                            <th>Cliente</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="hisotrial">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

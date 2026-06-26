@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    min-height:100vh;
+    padding:30px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+header{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:2.2rem;
+}
+
+header p{
+    opacity:.9;
+}
+
+.top-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:20px;
+    color:#1f2937;
+}
+
+.input-group{
+    margin-bottom:15px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:500;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    outline:none;
+}
+
+.input-group input:focus{
+    border-color:#2563eb;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-primary{
+    width:100%;
+    background:#2563eb;
+    color:white;
+    padding:14px;
+    border-radius:12px;
+    font-size:1rem;
+    font-weight:600;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-success{
+    width:100%;
+    background:#10b981;
+    color:white;
+    padding:14px;
+    border-radius:12px;
+    font-size:1rem;
+    font-weight:600;
+}
+
+.robot-status{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.status-box{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:12px;
+    border-left:5px solid #2563eb;
+}
+
+.status-box h3{
+    margin-bottom:5px;
+}
+
+.pedido-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:15px;
+}
+
+.pedido-card{
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    border-radius:12px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#2563eb;
+    color:white;
+}
+
+th,
+td{
+    padding:15px;
+    text-align:left;
+}
+
+tbody tr:nth-child(even){
+    background:#f8fafc;
+}
+
+.estado{
+    padding:8px 12px;
+    border-radius:20px;
+    color:white;
+    font-size:.85rem;
+}
+
+.entregado{
+    background:#10b981;
+}
+
+.no-encontrado{
+    background:#f59e0b;
+}
+
+.equivocado{
+    background:#ef4444;
+}
+
+@media(max-width:900px){
+
+    .top-grid{
+        grid-template-columns:1fr;
+    }
+
+    body{
+        padding:15px;
+    }
+
+}
