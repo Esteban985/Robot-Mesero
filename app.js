@@ -189,6 +189,7 @@ btnSiguiente.addEventListener('click', (event) => {
         sonido.volume = 1; //ajuster el volumen
         sonido.rate = 1;// ajustar la velocidad
         sonido.pitch = 1;//ajustar la agusidez de la voz
+        window.speechSynthesis.cancel(sonido)
         window.speechSynthesis.speak(sonido)
         misPedidos.dequeue()
         misPedidos.mostrarPedidos()
